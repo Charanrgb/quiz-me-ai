@@ -3,3 +3,4 @@ streamlit==1.23.1
 pillow==9.5.0
 pip>=24.0
 setuptools
+os
