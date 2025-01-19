@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Function to generate questions
 def generate_questions(topic, difficulty, num_questions):
