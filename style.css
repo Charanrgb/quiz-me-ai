@@ -1,0 +1,31 @@
+
+[data-testid="stAppViewContainer"] > .main{
+background-color: black;
+background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+
+}
+
+.stButton button {
+    transition: all 0.3s ease-in-out;
+    background-color:black; 
+    color: white; 
+  }
+  
+.stButton button:hover {
+    background-color: white; 
+    color: black; 
+    border-color: white;
+  }
+  .stTextInput > div > div  {
+    transition: all 0.1s ease-in-out;
+  }
+  
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 12px;
+    text-align: right;
+}
