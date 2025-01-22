@@ -1,31 +1,221 @@
-
-[data-testid="stAppViewContainer"] > .main{
-background-color: black;
-background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
-
+/* Base styles */
+[data-testid="stAppViewContainer"] > .main {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  min-height: 100vh;
+}
+div[data-testid="stTextInput"] > div > div > input {
+  background-color: ab!important; /* Light background */
+  color: white !important; /* Text color */
+  border: 1px solid rgba(52, 152, 219, 0.3) !important; /* Border color */
+  border-radius: 8px !important; /* Rounded corners */
+  padding: 0.5rem 1rem !important; /* Padding */
 }
 
-.stButton button {
-    transition: all 0.3s ease-in-out;
-    background-color:black; 
-    color: white; 
-  }
-  
-.stButton button:hover {
-    background-color: white; 
-    color: black; 
-    border-color: white;
-  }
-  .stTextInput > div > div  {
-    transition: all 0.1s ease-in-out;
-  }
-  
+/* Slider - Custom Background */
+div[data-testid="stSlider"] > div > div > div > div {
+  background-color: rgba(255, 255, 255, 0.1) !important; /* Light background */
+  border-radius: 8px !important; /* Rounded corners */
+}
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 10px;
-    font-size: 12px;
-    text-align: right;
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+div[data-testid="stTextInput"] > div > div > input {
+  background-color: rgba(255, 255, 255, 0.1) !important; /* Light background */
+  color: white !important; /* Text color */
+  border: 1px solid rgba(52, 152, 219, 0.3) !important; /* Border color */
+  border-radius: 8px !important; /* Rounded corners */
+  padding: 0.5rem 1rem !important; /* Padding */
+}
+
+/* Slider - Custom Background */
+div[data-testid="stSlider"] > div > div > div > div {
+  background-color: rgba(255, 255, 255, 0.1) !important; /* Light background */
+  border-radius: 8px !important; /* Rounded corners */
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(52, 152, 219, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: #3498db;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: white;
+  font-size: 1rem;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.stButton button {
+  background: linear-gradient(45deg, #3498db, #2980b9) !important;
+  color: white !important;
+  padding: 0.8rem 2rem !important;
+  font-size: 1.1rem !important;
+  border: none !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.stButton button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3) !important;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Hide Streamlit Default Elements */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .main-title {
+      font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+      font-size: 1.5rem;
+  }
+  
+  .feature-card {
+      margin: 1rem;
+  }
+}
+
+/* Custom Radio Buttons */
+.stRadio > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stRadio > div > label {
+  background: linear-gradient(45deg, #3498db, #2980b9) !important;
+  color: white !important;
+  padding: 0.8rem 2rem !important;
+  font-size: 1.1rem !important;
+  border: none !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+  text-align: center;
+}
+
+.stRadio > div > label:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3) !important;
+}
+
+/* Custom Radio Buttons - 2 Columns */
+.stRadio > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1rem; /* Space between buttons */
+  width: 80%; /* Total width of the radio button container */
+  margin: 0 auto; /* Center the container */
+}
+
+.stRadio > div > label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1); /* Light background */
+  color: white !important;
+  padding: 1rem !important;
+  font-size: 1rem !important;
+  border: 1px solid rgba(52, 152, 219, 0.3) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+  text-align: center;
+  width: 100%; /* Full width of the grid cell */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.stRadio > div > label:hover {
+  background: rgba(52, 152, 219, 0.2) !important; /* Hover effect */
+  border-color: #3498db !important;
+}
+
+/* Style for selected radio button */
+.stRadio > div > label[data-baseweb="radio"] > div:last-child {
+  color: white !important;
 }
