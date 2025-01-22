@@ -102,26 +102,26 @@ elif st.session_state.page == "questions":
     for idx, question_text in enumerate(st.session_state.questions):
         choices = st.session_state.choices[idx]
 
-    # Display the question
-    st.write(f"Q{idx + 1}: {question_text}")
+        # Display the question
+        st.write(f"Q{idx + 1}: {question_text}")
 
-    # Check if submitted to disable further input
-    if st.session_state.submitted:
-        st.radio(
-            label="",
-            options=choices,
-            index=choices.index(st.session_state.user_answers[idx]) if st.session_state.user_answers[idx] else 0,
-            key=f"question_{idx}_choice",
-            disabled=True
-        )
-    else:
-        st.session_state.user_answers[idx] = st.radio(
-            label="",
-            options=choices,
-            index=0,
-            key=f"question_{idx}_choice",
-            disabled=False
-        )
+        # Check if submitted to disable further input
+        if st.session_state.submitted:
+            st.radio(
+                label="",
+                options=choices,
+                index=choices.index(st.session_state.user_answers[idx]) if st.session_state.user_answers[idx] else 0,
+                key=f"question_{idx}_choice",
+                disabled=True
+            )
+        else:
+            st.session_state.user_answers[idx] = st.radio(
+                label="",
+                options=choices,
+                index=0,
+                key=f"question_{idx}_choice",
+                disabled=False
+            )
 
     # Submit button to calculate and display results
     if not st.session_state.submitted and st.button("Submit"):
