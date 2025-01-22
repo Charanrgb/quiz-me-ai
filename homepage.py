@@ -17,7 +17,7 @@ def landing_page():
         <div class="feature-card">
             <div class="feature-icon">🤖</div>
             <h3>AI-Powered</h3>
-            <p>Unique questions generated for every quiz session</p>
+            <p>Enter topic and Answer questions!</p>
         </div>
     """, unsafe_allow_html=True)
 
@@ -25,8 +25,8 @@ def landing_page():
     st.markdown("""
         <div class="feature-card">
             <div class="feature-icon">📊</div>
-            <h3>Track Progress</h3>
-            <p>Get instant feedback and performance insights</p>
+            <h3>Random questions everytime!</h3>
+            <p>No 2 Quizzes are the same!</p>
         </div>
     """, unsafe_allow_html=True)
 
